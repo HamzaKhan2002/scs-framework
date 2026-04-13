@@ -8,7 +8,7 @@ This repository contains the full implementation and data for the paper:
 
 The Signal Credibility Score (SCS) is a three-phase validation framework for machine-learning trading signals, designed to separate genuine predictive ability from overfitting artifacts:
 
-1. **Phase A (Discovery, 2010-2013):** Trains 81 model-feature-label configurations per ticker and scores each signal group with SCS-A, a composite of accuracy, Sharpe ratio, stability, drawdown, and model consensus (performance-weighted Spearman with Kish effective-N guard).
+1. **Phase A (Discovery, 2010-2013):** Exhaustive search over 6 horizons × 2 label strategies × 3 models × 5 seeds × 3 sub-periods (540 runs per ticker, 14,580 total). Scores each of 12 signal groups with SCS-A, a composite of accuracy, Sharpe ratio, stability, drawdown, and model consensus (performance-weighted Spearman with Kish effective-N guard).
 2. **Phase B (Walk-Forward, 2014-2022):** Expanding-window walk-forward validation on held-out data with purged temporal splits. Scores with SCS-B (five sub-scores, stricter thresholds).
 3. **Phase C (Out-of-Sample, 2023-2025):** Frozen models applied to three non-overlapping OOS windows (2023, 2024, 2025) with bootstrap, Deflated Sharpe Ratio, and Ledoit-Wolf tests.
 

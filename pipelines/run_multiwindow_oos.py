@@ -2,7 +2,7 @@
 Multi-Window OOS Runner — Phase B + C for 2023, 2024, 2025.
 
 Design:
-  - Phase A is IDENTICAL for all three windows (2015-2018 discovery)
+  - Phase A is IDENTICAL for all three windows (2010-2013 discovery)
   - Phase B re-runs with expanding walk-forward:
       Window 1: train 2019-2022, test 2023
       Window 2: train 2019-2023, test 2024
@@ -137,7 +137,7 @@ def run_multiwindow():
 
     print("=" * 70)
     print("MULTI-WINDOW OOS EXPERIMENT")
-    print("Phase A: 2015-2018 (identical, loaded from experiment_1)")
+    print("Phase A: 2010-2013 (identical, loaded from experiment_1)")
     print("=" * 70)
 
     all_window_results = {}
