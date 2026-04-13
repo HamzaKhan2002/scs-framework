@@ -1,0 +1,50 @@
+{
+  "pbo": 0.8,
+  "n_combos": 15,
+  "mean_is_oos_rank_correlation": 0.1417,
+  "rank_correlations": [
+    0.028,
+    0.4965,
+    0.2867,
+    0.2378,
+    0.035,
+    0.2378,
+    0.1818,
+    0.2098,
+    -0.0909,
+    0.1469,
+    0.2378,
+    -0.014,
+    0.007,
+    -0.1678,
+    0.2937
+  ],
+  "per_group_pbo": {
+    "10d_directional_binary": 0.4,
+    "10d_multiclass_volatility": 0.4,
+    "15d_directional_binary": 0.4667,
+    "15d_multiclass_volatility": 0.3333,
+    "20d_directional_binary": 0.1333,
+    "20d_multiclass_volatility": 0.2,
+    "3d_directional_binary": 0.9333,
+    "3d_multiclass_volatility": 0.4667,
+    "5d_directional_binary": 1.0,
+    "5d_multiclass_volatility": 0.4667,
+    "7d_directional_binary": 0.9333,
+    "7d_multiclass_volatility": 0.2667
+  },
+  "per_group_mean_logit": {
+    "10d_directional_binary": -0.2597,
+    "10d_multiclass_volatility": -0.4109,
+    "15d_directional_binary": -0.1871,
+    "15d_multiclass_volatility": -0.4728,
+    "20d_directional_binary": -1.037,
+    "20d_multiclass_volatility": -0.7574,
+    "3d_directional_binary": 1.8051,
+    "3d_multiclass_volatility": -0.2177,
+    "5d_directional_binary": 1.7125,
+    "5d_multiclass_volatility": -0.4509,
+    "7d_directional_binary": 0.9688,
+    "7d_multiclass_volatility": -0.6928
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "experiment": "oracle_feature_injection",
+  "description": "Injects oracle=fwd_ret+k*std*noise into feature matrix. Labels are real directional_binary 5d. Tests SCS scoring/gating machinery, not feature predictive power. Oracle uses lookahead (controlled validation only).",
+  "calibration": {
+    "k=0.5": {
+      "corr": 0.8991098737447635,
+      "accuracy": 0.8465925925925925
+    },
+    "k=1.5": {
+      "corr": 0.5690695216819468,
+      "accuracy": 0.681074074074074
+    },
+    "k=4.0": {
+      "corr": 0.2575691041269258,
+      "accuracy": 0.5784074074074075
+    }
+  },
+  "dose_response": {
+    "k=0.5": {
+      "SCS_A": 0.8282,
+      "S_time": 0.955,
+      "S_asset": 0.9532,
+      "S_model": 0.4444,
+      "S_seed": 0.96,
+      "S_dist": 0.9601,
+      "verdict": "PHASE_B_APPROVED",
+      "mean_sharpe": 3.3211,
+      "positive_ratio": 1.0,
+      "n_results": 1215,
+      "n_trades_total": 18363,
+      "group_key": "oracle_k0.5",
+      "k_value": 0.5,
+      "n_runs": 1215
+    },
+    "k=1.5": {
+      "SCS_A": 0.8433,
+      "S_time": 0.9336,
+      "S_asset": 0.9088,
+      "S_model": 0.5732,
+      "S_seed": 0.9391,
+      "S_dist": 0.9854,
+      "verdict": "PHASE_B_APPROVED",
+      "mean_sharpe": 1.6672,
+      "positive_ratio": 0.8519,
+      "n_results": 1215,
+      "n_trades_total": 19151,
+      "group_key": "oracle_k1.5",
+      "k_value": 1.5,
+      "n_runs": 1215
+    },
+    "k=4.0": {
+      "SCS_A": 0.8186,
+      "S_time": 0.9169,
+      "S_asset": 0.8892,
+      "S_model": 0.5176,
+      "S_seed": 0.9301,
+      "S_dist": 0.9815,
+      "verdict": "PHASE_B_APPROVED",
+      "mean_sharpe": 1.2128,
+      "positive_ratio": 0.7778,
+      "n_results": 1215,
+      "n_trades_total": 18937,
+      "group_key": "oracle_k4.0",
+      "k_value": 4.0,
+      "n_runs": 1215
+    }
+  }
+}

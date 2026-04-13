@@ -1,0 +1,69 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Pytest
+.pytest_cache/
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+
+# PDF outputs (compiled papers)
+*.pdf
+
+# Large raw experiment files (summary JSONs are kept)
+results/experiments/fdr_simulation_raw.json
+results/experiments/power_analysis_raw.json
+results/experiments/regime_fdr_raw.json
+
+# Data cache (downloaded market data)
+data/cache/
+
+# Temporary/diagnostic scripts
+_tmp_*.py
+
+# Session logs and runtime artifacts
+Pod_Session.txt
+RUNPOD_PLAN.md
+results/experiments/vm_progress.json
+
+# Intermediate results (aggregates in pipeline_final.json suffice)
+results/phase_a/
+results/phase_b/models/
+
+# VM-specific helper scripts
+pipelines/launch_corruption.py
+pipelines/launch_resume.py
+pipelines/resume_corruption.py
+pipelines/run_vm_all.py
+pipelines/diagnostic_synthetic_vs_real.py

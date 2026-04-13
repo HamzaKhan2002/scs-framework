@@ -1,0 +1,582 @@
+{
+  "2010-2013": {
+    "window": "2010-2013",
+    "phase_a": {
+      "start": "2010-01-01",
+      "end": "2013-12-31"
+    },
+    "phase_b": {
+      "start": "2014-01-01",
+      "end": "2022-12-31"
+    },
+    "phase_c": {
+      "start": "2023-01-01",
+      "end": "2023-12-31"
+    },
+    "n_wf_folds": 6,
+    "phase_a_results": {
+      "3d_directional_binary": {
+        "SCS_A": 0.6185,
+        "S_time": 0.9269,
+        "S_asset": 0.4,
+        "S_model": 0.244,
+        "S_seed": 0.9185,
+        "S_dist": 0.88,
+        "verdict": "BORDERLINE",
+        "mean_sharpe": 0.9017
+      },
+      "3d_multiclass_volatility": {
+        "SCS_A": 0.5726,
+        "S_time": 0.9379,
+        "S_asset": 0.4,
+        "S_model": 0.0,
+        "S_seed": 0.9206,
+        "S_dist": 1.0,
+        "verdict": "BORDERLINE",
+        "mean_sharpe": 0.7725
+      },
+      "5d_directional_binary": {
+        "SCS_A": 0.7665,
+        "S_time": 0.9421,
+        "S_asset": 0.6986,
+        "S_model": 0.4816,
+        "S_seed": 0.9308,
+        "S_dist": 0.9626,
+        "verdict": "PHASE_B_APPROVED",
+        "mean_sharpe": 1.1145
+      },
+      "5d_multiclass_volatility": {
+        "SCS_A": 0.7037,
+        "S_time": 0.9265,
+        "S_asset": 0.8586,
+        "S_model": 0.0781,
+        "S_seed": 0.9248,
+        "S_dist": 0.9923,
+        "verdict": "PHASE_B_APPROVED",
+        "mean_sharpe": 1.12
+      },
+      "7d_directional_binary": {
+        "SCS_A": 0.7292,
+        "S_time": 0.9757,
+        "S_asset": 0.6492,
+        "S_model": 0.3389,
+        "S_seed": 0.9386,
+        "S_dist": 0.9742,
+        "verdict": "PHASE_B_APPROVED",
+        "mean_sharpe": 1.1841
+      },
+      "7d_multiclass_volatility": {
+        "SCS_A": 0.6264,
+        "S_time": 0.9247,
+        "S_asset": 0.4,
+        "S_model": 0.2311,
+        "S_seed": 0.9324,
+        "S_dist": 0.9759,
+        "verdict": "BORDERLINE",
+        "mean_sharpe": 1.1233
+      },
+      "10d_directional_binary": {
+        "SCS_A": 0.7504,
+        "S_time": 0.9137,
+        "S_asset": 0.7554,
+        "S_model": 0.3817,
+        "S_seed": 0.9259,
+        "S_dist": 0.9884,
+        "verdict": "PHASE_B_APPROVED",
+        "mean_sharpe": 1.2358
+      },
+      "10d_multiclass_volatility": {
+        "SCS_A": 0.6457,
+        "S_time": 0.8426,
+        "S_asset": 0.769,
+        "S_model": 0.0,
+        "S_seed": 0.9569,
+        "S_dist": 0.9924,
+        "verdict": "BORDERLINE",
+        "mean_sharpe": 8.5445
+      },
+      "15d_directional_binary": {
+        "SCS_A": 0.6239,
+        "S_time": 0.771,
+        "S_asset": 0.4,
+        "S_model": 0.3632,
+        "S_seed": 0.9622,
+        "S_dist": 0.9601,
+        "verdict": "BORDERLINE",
+        "mean_sharpe": 1.3852
+      },
+      "15d_multiclass_volatility": {
+        "SCS_A": 0.6532,
+        "S_time": 0.8729,
+        "S_asset": 0.7651,
+        "S_model": 0.0,
+        "S_seed": 0.9637,
+        "S_dist": 0.9915,
+        "verdict": "BORDERLINE",
+        "mean_sharpe": 4.6621
+      },
+      "20d_directional_binary": {
+        "SCS_A": 0.6842,
+        "S_time": 0.882,
+        "S_asset": 0.8182,
+        "S_model": 0.1155,
+        "S_seed": 0.9484,
+        "S_dist": 0.88,
+        "verdict": "BORDERLINE",
+        "mean_sharpe": 1.862
+      },
+      "20d_multiclass_volatility": {
+        "SCS_A": 0.7318,
+        "S_time": 0.9036,
+        "S_asset": 0.8202,
+        "S_model": 0.2343,
+        "S_seed": 0.9673,
+        "S_dist": 0.9714,
+        "verdict": "PHASE_B_APPROVED",
+        "mean_sharpe": 1.5304
+      }
+    },
+    "summary": {
+      "n_pass_070": 5,
+      "mean_scs_a": 0.6755,
+      "min_scs_a": 0.5726,
+      "max_scs_a": 0.7665
+    },
+    "elapsed_seconds": 483.3
+  },
+  "2011-2014": {
+    "window": "2011-2014",
+    "phase_a": {
+      "start": "2011-01-01",
+      "end": "2014-12-31"
+    },
+    "phase_b": {
+      "start": "2015-01-01",
+      "end": "2022-12-31"
+    },
+    "phase_c": {
+      "start": "2023-01-01",
+      "end": "2023-12-31"
+    },
+    "n_wf_folds": 5,
+    "phase_a_results": {
+      "3d_directional_binary": {
+        "SCS_A": 0.7477,
+        "S_time": 0.9266,
+        "S_asset": 0.7829,
+        "S_model": 0.3759,
+        "S_seed": 0.9224,
+        "S_dist": 0.88,
+        "verdict": "PHASE_B_APPROVED",
+        "mean_sharpe": 1.1352
+      },
+      "3d_multiclass_volatility": {
+        "SCS_A": 0.5613,
+        "S_time": 0.9509,
+        "S_asset": 0.4,
+        "S_model": 0.0,
+        "S_seed": 0.9035,
+        "S_dist": 0.88,
+        "verdict": "BORDERLINE",
+        "mean_sharpe": 0.5973
+      },
+      "5d_directional_binary": {
+        "SCS_A": 0.7132,
+        "S_time": 0.9493,
+        "S_asset": 0.8639,
+        "S_model": 0.0891,
+        "S_seed": 0.9285,
+        "S_dist": 0.9833,
+        "verdict": "PHASE_B_APPROVED",
+        "mean_sharpe": 1.4177
+      },
+      "5d_multiclass_volatility": {
+        "SCS_A": 0.5556,
+        "S_time": 0.9129,
+        "S_asset": 0.4,
+        "S_model": 0.0,
+        "S_seed": 0.929,
+        "S_dist": 0.88,
+        "verdict": "BORDERLINE",
+        "mean_sharpe": 0.9396
+      },
+      "7d_directional_binary": {
+        "SCS_A": 0.6163,
+        "S_time": 0.939,
+        "S_asset": 0.4,
+        "S_model": 0.2198,
+        "S_seed": 0.9241,
+        "S_dist": 0.88,
+        "verdict": "BORDERLINE",
+        "mean_sharpe": 1.0529
+      },
+      "7d_multiclass_volatility": {
+        "SCS_A": 0.6461,
+        "S_time": 0.9201,
+        "S_asset": 0.7103,
+        "S_model": 0.0438,
+        "S_seed": 0.93,
+        "S_dist": 0.88,
+        "verdict": "BORDERLINE",
+        "mean_sharpe": 1.0036
+      },
+      "10d_directional_binary": {
+        "SCS_A": 0.7642,
+        "S_time": 0.9472,
+        "S_asset": 0.7994,
+        "S_model": 0.3398,
+        "S_seed": 0.9505,
+        "S_dist": 1.0,
+        "verdict": "PHASE_B_APPROVED",
+        "mean_sharpe": 1.3933
+      },
+      "10d_multiclass_volatility": {
+        "SCS_A": 0.7116,
+        "S_time": 0.9415,
+        "S_asset": 0.8044,
+        "S_model": 0.142,
+        "S_seed": 0.9447,
+        "S_dist": 0.9792,
+        "verdict": "PHASE_B_APPROVED",
+        "mean_sharpe": 1.3903
+      },
+      "15d_directional_binary": {
+        "SCS_A": 0.8181,
+        "S_time": 0.9611,
+        "S_asset": 0.912,
+        "S_model": 0.4205,
+        "S_seed": 0.9646,
+        "S_dist": 1.0,
+        "verdict": "PHASE_B_APPROVED",
+        "mean_sharpe": 2.709
+      },
+      "15d_multiclass_volatility": {
+        "SCS_A": 0.7545,
+        "S_time": 0.969,
+        "S_asset": 0.9048,
+        "S_model": 0.1652,
+        "S_seed": 0.9646,
+        "S_dist": 1.0,
+        "verdict": "PHASE_B_APPROVED",
+        "mean_sharpe": 2.3291
+      },
+      "20d_directional_binary": {
+        "SCS_A": 0.6808,
+        "S_time": 0.8969,
+        "S_asset": 0.6646,
+        "S_model": 0.1797,
+        "S_seed": 0.9699,
+        "S_dist": 1.0,
+        "verdict": "BORDERLINE",
+        "mean_sharpe": 2.5697
+      },
+      "20d_multiclass_volatility": {
+        "SCS_A": 0.654,
+        "S_time": 0.8956,
+        "S_asset": 0.6378,
+        "S_model": 0.1423,
+        "S_seed": 0.9802,
+        "S_dist": 0.88,
+        "verdict": "BORDERLINE",
+        "mean_sharpe": 2.4945
+      }
+    },
+    "summary": {
+      "n_pass_070": 6,
+      "mean_scs_a": 0.6853,
+      "min_scs_a": 0.5556,
+      "max_scs_a": 0.8181
+    },
+    "elapsed_seconds": 493.7
+  },
+  "2012-2015": {
+    "window": "2012-2015",
+    "phase_a": {
+      "start": "2012-01-01",
+      "end": "2015-12-31"
+    },
+    "phase_b": {
+      "start": "2016-01-01",
+      "end": "2022-12-31"
+    },
+    "phase_c": {
+      "start": "2023-01-01",
+      "end": "2023-12-31"
+    },
+    "n_wf_folds": 4,
+    "phase_a_results": {
+      "3d_directional_binary": {
+        "SCS_A": 0.7783,
+        "S_time": 0.912,
+        "S_asset": 0.9134,
+        "S_model": 0.3817,
+        "S_seed": 0.9237,
+        "S_dist": 0.88,
+        "verdict": "PHASE_B_APPROVED",
+        "mean_sharpe": 1.555
+      },
+      "3d_multiclass_volatility": {
+        "SCS_A": 0.7032,
+        "S_time": 0.9394,
+        "S_asset": 0.9095,
+        "S_model": 0.068,
+        "S_seed": 0.926,
+        "S_dist": 0.8507,
+        "verdict": "PHASE_B_APPROVED",
+        "mean_sharpe": 1.2308
+      },
+      "5d_directional_binary": {
+        "SCS_A": 0.6468,
+        "S_time": 0.8659,
+        "S_asset": 0.8098,
+        "S_model": 0.0,
+        "S_seed": 0.9326,
+        "S_dist": 0.88,
+        "verdict": "BORDERLINE",
+        "mean_sharpe": 2.9735
+      },
+      "5d_multiclass_volatility": {
+        "SCS_A": 0.7137,
+        "S_time": 0.9135,
+        "S_asset": 0.8631,
+        "S_model": 0.1716,
+        "S_seed": 0.9246,
+        "S_dist": 0.88,
+        "verdict": "PHASE_B_APPROVED",
+        "mean_sharpe": 1.2566
+      },
+      "7d_directional_binary": {
+        "SCS_A": 0.7719,
+        "S_time": 0.9168,
+        "S_asset": 0.8923,
+        "S_model": 0.3634,
+        "S_seed": 0.9385,
+        "S_dist": 0.88,
+        "verdict": "PHASE_B_APPROVED",
+        "mean_sharpe": 1.5795
+      },
+      "7d_multiclass_volatility": {
+        "SCS_A": 0.7465,
+        "S_time": 0.9263,
+        "S_asset": 0.904,
+        "S_model": 0.1972,
+        "S_seed": 0.9311,
+        "S_dist": 1.0,
+        "verdict": "PHASE_B_APPROVED",
+        "mean_sharpe": 1.5515
+      },
+      "10d_directional_binary": {
+        "SCS_A": 0.8035,
+        "S_time": 0.8895,
+        "S_asset": 0.8845,
+        "S_model": 0.47,
+        "S_seed": 0.9502,
+        "S_dist": 1.0,
+        "verdict": "PHASE_B_APPROVED",
+        "mean_sharpe": 1.7941
+      },
+      "10d_multiclass_volatility": {
+        "SCS_A": 0.6599,
+        "S_time": 0.8689,
+        "S_asset": 0.8433,
+        "S_model": 0.031,
+        "S_seed": 0.9074,
+        "S_dist": 0.88,
+        "verdict": "BORDERLINE",
+        "mean_sharpe": 2.0447
+      },
+      "15d_directional_binary": {
+        "SCS_A": 0.6957,
+        "S_time": 0.75,
+        "S_asset": 0.867,
+        "S_model": 0.2381,
+        "S_seed": 0.9595,
+        "S_dist": 0.88,
+        "verdict": "BORDERLINE",
+        "mean_sharpe": 1.9214
+      },
+      "15d_multiclass_volatility": {
+        "SCS_A": 0.7861,
+        "S_time": 0.863,
+        "S_asset": 0.8752,
+        "S_model": 0.4778,
+        "S_seed": 0.9609,
+        "S_dist": 0.88,
+        "verdict": "PHASE_B_APPROVED",
+        "mean_sharpe": 1.9138
+      },
+      "20d_directional_binary": {
+        "SCS_A": 0.792,
+        "S_time": 0.8892,
+        "S_asset": 0.9115,
+        "S_model": 0.3932,
+        "S_seed": 0.9719,
+        "S_dist": 0.9775,
+        "verdict": "PHASE_B_APPROVED",
+        "mean_sharpe": 1.8738
+      },
+      "20d_multiclass_volatility": {
+        "SCS_A": 0.777,
+        "S_time": 0.8831,
+        "S_asset": 0.9065,
+        "S_model": 0.3406,
+        "S_seed": 0.9779,
+        "S_dist": 0.9771,
+        "verdict": "PHASE_B_APPROVED",
+        "mean_sharpe": 1.7501
+      }
+    },
+    "summary": {
+      "n_pass_070": 9,
+      "mean_scs_a": 0.7396,
+      "min_scs_a": 0.6468,
+      "max_scs_a": 0.8035
+    },
+    "elapsed_seconds": 489.3
+  },
+  "2013-2016": {
+    "window": "2013-2016",
+    "phase_a": {
+      "start": "2013-01-01",
+      "end": "2016-12-31"
+    },
+    "phase_b": {
+      "start": "2017-01-01",
+      "end": "2022-12-31"
+    },
+    "phase_c": {
+      "start": "2023-01-01",
+      "end": "2023-12-31"
+    },
+    "n_wf_folds": 3,
+    "phase_a_results": {
+      "3d_directional_binary": {
+        "SCS_A": 0.3904,
+        "S_time": 0.2584,
+        "S_asset": 0.2252,
+        "S_model": 0.1857,
+        "S_seed": 0.8427,
+        "S_dist": 0.9672,
+        "verdict": "REJECTED",
+        "mean_sharpe": 0.1168
+      },
+      "3d_multiclass_volatility": {
+        "SCS_A": 0.3975,
+        "S_time": 0.3538,
+        "S_asset": 0.3165,
+        "S_model": 0.0,
+        "S_seed": 0.8921,
+        "S_dist": 0.9615,
+        "verdict": "REJECTED",
+        "mean_sharpe": 0.2844
+      },
+      "5d_directional_binary": {
+        "SCS_A": 0.5162,
+        "S_time": 0.4052,
+        "S_asset": 0.3165,
+        "S_model": 0.4009,
+        "S_seed": 0.9156,
+        "S_dist": 0.9824,
+        "verdict": "BORDERLINE",
+        "mean_sharpe": 0.2456
+      },
+      "5d_multiclass_volatility": {
+        "SCS_A": 0.5521,
+        "S_time": 0.6804,
+        "S_asset": 0.4,
+        "S_model": 0.1831,
+        "S_seed": 0.9233,
+        "S_dist": 0.9773,
+        "verdict": "BORDERLINE",
+        "mean_sharpe": 0.4564
+      },
+      "7d_directional_binary": {
+        "SCS_A": 0.5757,
+        "S_time": 0.8883,
+        "S_asset": 0.4,
+        "S_model": 0.0654,
+        "S_seed": 0.9282,
+        "S_dist": 0.98,
+        "verdict": "BORDERLINE",
+        "mean_sharpe": 0.9063
+      },
+      "7d_multiclass_volatility": {
+        "SCS_A": 0.6216,
+        "S_time": 0.7578,
+        "S_asset": 0.6191,
+        "S_model": 0.1609,
+        "S_seed": 0.9303,
+        "S_dist": 0.9757,
+        "verdict": "BORDERLINE",
+        "mean_sharpe": 0.7767
+      },
+      "10d_directional_binary": {
+        "SCS_A": 0.6243,
+        "S_time": 0.887,
+        "S_asset": 0.4,
+        "S_model": 0.2572,
+        "S_seed": 0.9334,
+        "S_dist": 0.9828,
+        "verdict": "BORDERLINE",
+        "mean_sharpe": 0.7569
+      },
+      "10d_multiclass_volatility": {
+        "SCS_A": 0.6354,
+        "S_time": 0.8881,
+        "S_asset": 0.5669,
+        "S_model": 0.129,
+        "S_seed": 0.9385,
+        "S_dist": 0.986,
+        "verdict": "BORDERLINE",
+        "mean_sharpe": 0.7723
+      },
+      "15d_directional_binary": {
+        "SCS_A": 0.5651,
+        "S_time": 0.8877,
+        "S_asset": 0.4,
+        "S_model": 0.0,
+        "S_seed": 0.9547,
+        "S_dist": 1.0,
+        "verdict": "BORDERLINE",
+        "mean_sharpe": 1.8009
+      },
+      "15d_multiclass_volatility": {
+        "SCS_A": 0.6335,
+        "S_time": 0.9496,
+        "S_asset": 0.4,
+        "S_model": 0.2068,
+        "S_seed": 0.9622,
+        "S_dist": 1.0,
+        "verdict": "BORDERLINE",
+        "mean_sharpe": 0.785
+      },
+      "20d_directional_binary": {
+        "SCS_A": 0.6289,
+        "S_time": 0.9459,
+        "S_asset": 0.4,
+        "S_model": 0.1967,
+        "S_seed": 0.9681,
+        "S_dist": 0.9801,
+        "verdict": "BORDERLINE",
+        "mean_sharpe": 1.2675
+      },
+      "20d_multiclass_volatility": {
+        "SCS_A": 0.4278,
+        "S_time": 0.3305,
+        "S_asset": 0.3189,
+        "S_model": 0.1175,
+        "S_seed": 0.9203,
+        "S_dist": 0.9806,
+        "verdict": "REJECTED",
+        "mean_sharpe": 0.2601
+      }
+    },
+    "summary": {
+      "n_pass_070": 0,
+      "mean_scs_a": 0.5474,
+      "min_scs_a": 0.3904,
+      "max_scs_a": 0.6354
+    },
+    "elapsed_seconds": 489.9
+  }
+}

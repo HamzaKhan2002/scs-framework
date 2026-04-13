@@ -1,0 +1,479 @@
+{
+  "conservative": {
+    "config_name": "conservative",
+    "model_params": {
+      "lightgbm": {
+        "learning_rate": 0.03,
+        "n_estimators": 300,
+        "max_depth": 2,
+        "num_leaves": 4,
+        "min_child_samples": 300,
+        "subsample": 0.6,
+        "colsample_bytree": 0.6,
+        "reg_alpha": 2.0,
+        "reg_lambda": 10.0
+      },
+      "xgboost": {
+        "learning_rate": 0.03,
+        "n_estimators": 300,
+        "max_depth": 3,
+        "min_child_weight": 10,
+        "subsample": 0.6,
+        "colsample_bytree": 0.6,
+        "reg_alpha": 2.0,
+        "reg_lambda": 10.0
+      },
+      "logistic_regression": {
+        "penalty": "l2",
+        "C": 0.1,
+        "solver": "lbfgs",
+        "max_iter": 1000
+      }
+    },
+    "elapsed_seconds": 280.6,
+    "groups": {
+      "3d_directional_binary": {
+        "SCS_A": 0.6721,
+        "verdict": "BORDERLINE",
+        "S_time": 0.9246,
+        "S_asset": 0.4,
+        "S_model": 0.4541,
+        "S_seed": 0.9296,
+        "S_dist": 0.88,
+        "mean_sharpe": 0.9722
+      },
+      "3d_multiclass_volatility": {
+        "SCS_A": 0.5781,
+        "verdict": "BORDERLINE",
+        "S_time": 0.9526,
+        "S_asset": 0.4,
+        "S_model": 0.0287,
+        "S_seed": 0.8854,
+        "S_dist": 1.0,
+        "mean_sharpe": 0.7172
+      },
+      "5d_directional_binary": {
+        "SCS_A": 0.805,
+        "verdict": "PHASE_B_APPROVED",
+        "S_time": 0.9316,
+        "S_asset": 0.8552,
+        "S_model": 0.475,
+        "S_seed": 0.9446,
+        "S_dist": 0.979,
+        "mean_sharpe": 1.1158
+      },
+      "5d_multiclass_volatility": {
+        "SCS_A": 0.6247,
+        "verdict": "BORDERLINE",
+        "S_time": 0.918,
+        "S_asset": 0.6089,
+        "S_model": 0.0323,
+        "S_seed": 0.9067,
+        "S_dist": 0.9896,
+        "mean_sharpe": 0.9655
+      },
+      "7d_directional_binary": {
+        "SCS_A": 0.7856,
+        "verdict": "PHASE_B_APPROVED",
+        "S_time": 0.981,
+        "S_asset": 0.8235,
+        "S_model": 0.3737,
+        "S_seed": 0.9541,
+        "S_dist": 0.9788,
+        "mean_sharpe": 1.1991
+      },
+      "7d_multiclass_volatility": {
+        "SCS_A": 0.6023,
+        "verdict": "BORDERLINE",
+        "S_time": 0.9575,
+        "S_asset": 0.4,
+        "S_model": 0.0869,
+        "S_seed": 0.941,
+        "S_dist": 1.0,
+        "mean_sharpe": 1.1666
+      },
+      "10d_directional_binary": {
+        "SCS_A": 0.7256,
+        "verdict": "PHASE_B_APPROVED",
+        "S_time": 0.9116,
+        "S_asset": 0.8081,
+        "S_model": 0.2332,
+        "S_seed": 0.9232,
+        "S_dist": 0.9887,
+        "mean_sharpe": 1.2619
+      },
+      "10d_multiclass_volatility": {
+        "SCS_A": 0.6449,
+        "verdict": "BORDERLINE",
+        "S_time": 0.8525,
+        "S_asset": 0.7595,
+        "S_model": 0.0,
+        "S_seed": 0.9553,
+        "S_dist": 0.9865,
+        "mean_sharpe": 3.3295
+      },
+      "15d_directional_binary": {
+        "SCS_A": 0.6309,
+        "verdict": "BORDERLINE",
+        "S_time": 0.7733,
+        "S_asset": 0.6228,
+        "S_model": 0.1594,
+        "S_seed": 0.9699,
+        "S_dist": 0.9649,
+        "mean_sharpe": 1.3475
+      },
+      "15d_multiclass_volatility": {
+        "SCS_A": 0.5972,
+        "verdict": "BORDERLINE",
+        "S_time": 0.7504,
+        "S_asset": 0.6588,
+        "S_model": 0.0,
+        "S_seed": 0.9745,
+        "S_dist": 0.987,
+        "mean_sharpe": 3.608
+      },
+      "20d_directional_binary": {
+        "SCS_A": 0.6571,
+        "verdict": "BORDERLINE",
+        "S_time": 0.767,
+        "S_asset": 0.4,
+        "S_model": 0.5227,
+        "S_seed": 0.9779,
+        "S_dist": 0.88,
+        "mean_sharpe": 1.1585
+      },
+      "20d_multiclass_volatility": {
+        "SCS_A": 0.651,
+        "verdict": "BORDERLINE",
+        "S_time": 0.7565,
+        "S_asset": 0.4,
+        "S_model": 0.511,
+        "S_seed": 0.9742,
+        "S_dist": 0.88,
+        "mean_sharpe": 1.1435
+      }
+    },
+    "summary": {
+      "n_pass_070": 3,
+      "mean_scs_a": 0.6645
+    }
+  },
+  "baseline": {
+    "config_name": "baseline",
+    "model_params": {
+      "lightgbm": {
+        "learning_rate": 0.05,
+        "n_estimators": 400,
+        "max_depth": 3,
+        "num_leaves": 8,
+        "min_child_samples": 200,
+        "subsample": 0.7,
+        "colsample_bytree": 0.7,
+        "reg_alpha": 1.0,
+        "reg_lambda": 5.0
+      },
+      "xgboost": {
+        "learning_rate": 0.05,
+        "n_estimators": 400,
+        "max_depth": 6,
+        "min_child_weight": 5,
+        "subsample": 0.7,
+        "colsample_bytree": 0.7,
+        "reg_alpha": 1.0,
+        "reg_lambda": 5.0
+      },
+      "logistic_regression": {
+        "penalty": "l2",
+        "C": 1.0,
+        "solver": "lbfgs",
+        "max_iter": 1000
+      }
+    },
+    "elapsed_seconds": 507.7,
+    "groups": {
+      "3d_directional_binary": {
+        "SCS_A": 0.6185,
+        "verdict": "BORDERLINE",
+        "S_time": 0.9269,
+        "S_asset": 0.4,
+        "S_model": 0.244,
+        "S_seed": 0.9185,
+        "S_dist": 0.88,
+        "mean_sharpe": 0.9017
+      },
+      "3d_multiclass_volatility": {
+        "SCS_A": 0.5726,
+        "verdict": "BORDERLINE",
+        "S_time": 0.9379,
+        "S_asset": 0.4,
+        "S_model": 0.0,
+        "S_seed": 0.9206,
+        "S_dist": 1.0,
+        "mean_sharpe": 0.7725
+      },
+      "5d_directional_binary": {
+        "SCS_A": 0.7665,
+        "verdict": "PHASE_B_APPROVED",
+        "S_time": 0.9421,
+        "S_asset": 0.6986,
+        "S_model": 0.4816,
+        "S_seed": 0.9308,
+        "S_dist": 0.9626,
+        "mean_sharpe": 1.1145
+      },
+      "5d_multiclass_volatility": {
+        "SCS_A": 0.7037,
+        "verdict": "PHASE_B_APPROVED",
+        "S_time": 0.9265,
+        "S_asset": 0.8586,
+        "S_model": 0.0781,
+        "S_seed": 0.9248,
+        "S_dist": 0.9923,
+        "mean_sharpe": 1.12
+      },
+      "7d_directional_binary": {
+        "SCS_A": 0.7292,
+        "verdict": "PHASE_B_APPROVED",
+        "S_time": 0.9757,
+        "S_asset": 0.6492,
+        "S_model": 0.3389,
+        "S_seed": 0.9386,
+        "S_dist": 0.9742,
+        "mean_sharpe": 1.1841
+      },
+      "7d_multiclass_volatility": {
+        "SCS_A": 0.6264,
+        "verdict": "BORDERLINE",
+        "S_time": 0.9247,
+        "S_asset": 0.4,
+        "S_model": 0.2311,
+        "S_seed": 0.9324,
+        "S_dist": 0.9759,
+        "mean_sharpe": 1.1233
+      },
+      "10d_directional_binary": {
+        "SCS_A": 0.7504,
+        "verdict": "PHASE_B_APPROVED",
+        "S_time": 0.9137,
+        "S_asset": 0.7554,
+        "S_model": 0.3817,
+        "S_seed": 0.9259,
+        "S_dist": 0.9884,
+        "mean_sharpe": 1.2358
+      },
+      "10d_multiclass_volatility": {
+        "SCS_A": 0.6457,
+        "verdict": "BORDERLINE",
+        "S_time": 0.8426,
+        "S_asset": 0.769,
+        "S_model": 0.0,
+        "S_seed": 0.9569,
+        "S_dist": 0.9924,
+        "mean_sharpe": 8.5445
+      },
+      "15d_directional_binary": {
+        "SCS_A": 0.6239,
+        "verdict": "BORDERLINE",
+        "S_time": 0.771,
+        "S_asset": 0.4,
+        "S_model": 0.3632,
+        "S_seed": 0.9622,
+        "S_dist": 0.9601,
+        "mean_sharpe": 1.3852
+      },
+      "15d_multiclass_volatility": {
+        "SCS_A": 0.6532,
+        "verdict": "BORDERLINE",
+        "S_time": 0.8729,
+        "S_asset": 0.7651,
+        "S_model": 0.0,
+        "S_seed": 0.9637,
+        "S_dist": 0.9915,
+        "mean_sharpe": 4.6621
+      },
+      "20d_directional_binary": {
+        "SCS_A": 0.6842,
+        "verdict": "BORDERLINE",
+        "S_time": 0.882,
+        "S_asset": 0.8182,
+        "S_model": 0.1155,
+        "S_seed": 0.9484,
+        "S_dist": 0.88,
+        "mean_sharpe": 1.862
+      },
+      "20d_multiclass_volatility": {
+        "SCS_A": 0.7318,
+        "verdict": "PHASE_B_APPROVED",
+        "S_time": 0.9036,
+        "S_asset": 0.8202,
+        "S_model": 0.2343,
+        "S_seed": 0.9673,
+        "S_dist": 0.9714,
+        "mean_sharpe": 1.5304
+      }
+    },
+    "summary": {
+      "n_pass_070": 5,
+      "mean_scs_a": 0.6755
+    }
+  },
+  "aggressive": {
+    "config_name": "aggressive",
+    "model_params": {
+      "lightgbm": {
+        "learning_rate": 0.1,
+        "n_estimators": 600,
+        "max_depth": 5,
+        "num_leaves": 31,
+        "min_child_samples": 50,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0.1,
+        "reg_lambda": 1.0
+      },
+      "xgboost": {
+        "learning_rate": 0.1,
+        "n_estimators": 600,
+        "max_depth": 8,
+        "min_child_weight": 1,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0.1,
+        "reg_lambda": 1.0
+      },
+      "logistic_regression": {
+        "penalty": "l2",
+        "C": 10.0,
+        "solver": "lbfgs",
+        "max_iter": 1000
+      }
+    },
+    "elapsed_seconds": 921.3,
+    "groups": {
+      "3d_directional_binary": {
+        "SCS_A": 0.6535,
+        "verdict": "BORDERLINE",
+        "S_time": 0.9081,
+        "S_asset": 0.4,
+        "S_model": 0.4052,
+        "S_seed": 0.9143,
+        "S_dist": 0.88,
+        "mean_sharpe": 0.9186
+      },
+      "3d_multiclass_volatility": {
+        "SCS_A": 0.5943,
+        "verdict": "BORDERLINE",
+        "S_time": 0.9431,
+        "S_asset": 0.4,
+        "S_model": 0.132,
+        "S_seed": 0.9167,
+        "S_dist": 0.88,
+        "mean_sharpe": 1.0955
+      },
+      "5d_directional_binary": {
+        "SCS_A": 0.6933,
+        "verdict": "BORDERLINE",
+        "S_time": 0.9392,
+        "S_asset": 0.4,
+        "S_model": 0.5007,
+        "S_seed": 0.9139,
+        "S_dist": 0.9625,
+        "mean_sharpe": 1.1369
+      },
+      "5d_multiclass_volatility": {
+        "SCS_A": 0.7489,
+        "verdict": "PHASE_B_APPROVED",
+        "S_time": 0.9396,
+        "S_asset": 0.7086,
+        "S_model": 0.4069,
+        "S_seed": 0.9195,
+        "S_dist": 0.9723,
+        "mean_sharpe": 1.3334
+      },
+      "7d_directional_binary": {
+        "SCS_A": 0.7187,
+        "verdict": "PHASE_B_APPROVED",
+        "S_time": 0.9491,
+        "S_asset": 0.4,
+        "S_model": 0.5892,
+        "S_seed": 0.9177,
+        "S_dist": 0.9648,
+        "mean_sharpe": 1.1016
+      },
+      "7d_multiclass_volatility": {
+        "SCS_A": 0.7425,
+        "verdict": "PHASE_B_APPROVED",
+        "S_time": 0.935,
+        "S_asset": 0.6232,
+        "S_model": 0.4675,
+        "S_seed": 0.923,
+        "S_dist": 0.9759,
+        "mean_sharpe": 1.2622
+      },
+      "10d_directional_binary": {
+        "SCS_A": 0.7563,
+        "verdict": "PHASE_B_APPROVED",
+        "S_time": 0.9076,
+        "S_asset": 0.6778,
+        "S_model": 0.4914,
+        "S_seed": 0.9285,
+        "S_dist": 0.9781,
+        "mean_sharpe": 1.2983
+      },
+      "10d_multiclass_volatility": {
+        "SCS_A": 0.6414,
+        "verdict": "BORDERLINE",
+        "S_time": 0.8429,
+        "S_asset": 0.7691,
+        "S_model": 0.0,
+        "S_seed": 0.9361,
+        "S_dist": 0.9796,
+        "mean_sharpe": 8.7099
+      },
+      "15d_directional_binary": {
+        "SCS_A": 0.6876,
+        "verdict": "BORDERLINE",
+        "S_time": 0.7676,
+        "S_asset": 0.4,
+        "S_model": 0.671,
+        "S_seed": 0.9334,
+        "S_dist": 0.88,
+        "mean_sharpe": 1.3827
+      },
+      "15d_multiclass_volatility": {
+        "SCS_A": 0.5977,
+        "verdict": "BORDERLINE",
+        "S_time": 0.8702,
+        "S_asset": 0.5657,
+        "S_model": 0.0,
+        "S_seed": 0.9395,
+        "S_dist": 0.9784,
+        "mean_sharpe": 4.7743
+      },
+      "20d_directional_binary": {
+        "SCS_A": 0.621,
+        "verdict": "BORDERLINE",
+        "S_time": 0.7599,
+        "S_asset": 0.4,
+        "S_model": 0.4199,
+        "S_seed": 0.9205,
+        "S_dist": 0.88,
+        "mean_sharpe": 1.7915
+      },
+      "20d_multiclass_volatility": {
+        "SCS_A": 0.5637,
+        "verdict": "BORDERLINE",
+        "S_time": 0.6028,
+        "S_asset": 0.4,
+        "S_model": 0.3411,
+        "S_seed": 0.9314,
+        "S_dist": 0.88,
+        "mean_sharpe": 1.3296
+      }
+    },
+    "summary": {
+      "n_pass_070": 4,
+      "mean_scs_a": 0.6682
+    }
+  }
+}

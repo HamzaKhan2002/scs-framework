@@ -1,0 +1,230 @@
+{
+  "threshold_table": [
+    {
+      "threshold": 0.5,
+      "n_passing": 12,
+      "avg_oos_sharpe": 0.5699,
+      "avg_oos_return": 9.59,
+      "groups": [
+        "5d_directional_binary",
+        "10d_directional_binary",
+        "20d_multiclass_volatility",
+        "7d_directional_binary",
+        "5d_multiclass_volatility",
+        "20d_directional_binary",
+        "15d_multiclass_volatility",
+        "10d_multiclass_volatility",
+        "7d_multiclass_volatility",
+        "15d_directional_binary",
+        "3d_directional_binary",
+        "3d_multiclass_volatility"
+      ]
+    },
+    {
+      "threshold": 0.55,
+      "n_passing": 12,
+      "avg_oos_sharpe": 0.5699,
+      "avg_oos_return": 9.59,
+      "groups": [
+        "5d_directional_binary",
+        "10d_directional_binary",
+        "20d_multiclass_volatility",
+        "7d_directional_binary",
+        "5d_multiclass_volatility",
+        "20d_directional_binary",
+        "15d_multiclass_volatility",
+        "10d_multiclass_volatility",
+        "7d_multiclass_volatility",
+        "15d_directional_binary",
+        "3d_directional_binary",
+        "3d_multiclass_volatility"
+      ]
+    },
+    {
+      "threshold": 0.6,
+      "n_passing": 11,
+      "avg_oos_sharpe": 0.6068,
+      "avg_oos_return": 10.43,
+      "groups": [
+        "5d_directional_binary",
+        "10d_directional_binary",
+        "20d_multiclass_volatility",
+        "7d_directional_binary",
+        "5d_multiclass_volatility",
+        "20d_directional_binary",
+        "15d_multiclass_volatility",
+        "10d_multiclass_volatility",
+        "7d_multiclass_volatility",
+        "15d_directional_binary",
+        "3d_directional_binary"
+      ]
+    },
+    {
+      "threshold": 0.65,
+      "n_passing": 7,
+      "avg_oos_sharpe": 0.7161,
+      "avg_oos_return": 12.72,
+      "groups": [
+        "5d_directional_binary",
+        "10d_directional_binary",
+        "20d_multiclass_volatility",
+        "7d_directional_binary",
+        "5d_multiclass_volatility",
+        "20d_directional_binary",
+        "15d_multiclass_volatility"
+      ]
+    },
+    {
+      "threshold": 0.7,
+      "n_passing": 5,
+      "avg_oos_sharpe": 0.59,
+      "avg_oos_return": 9.96,
+      "groups": [
+        "5d_directional_binary",
+        "10d_directional_binary",
+        "20d_multiclass_volatility",
+        "7d_directional_binary",
+        "5d_multiclass_volatility"
+      ]
+    },
+    {
+      "threshold": 0.75,
+      "n_passing": 2,
+      "avg_oos_sharpe": 0.6433,
+      "avg_oos_return": 10.86,
+      "groups": [
+        "5d_directional_binary",
+        "10d_directional_binary"
+      ]
+    },
+    {
+      "threshold": 0.8,
+      "n_passing": 0,
+      "avg_oos_sharpe": null,
+      "avg_oos_return": null,
+      "groups": []
+    }
+  ],
+  "all_groups": [
+    {
+      "group": "5d_directional_binary",
+      "scs_a": 0.7665,
+      "scs_b": 0.6694,
+      "oos_sharpe": 0.8187,
+      "oos_return": 14.45,
+      "oos_max_dd": -15.28,
+      "n_trades": 716,
+      "verdict_a": "PHASE_B_APPROVED"
+    },
+    {
+      "group": "10d_directional_binary",
+      "scs_a": 0.7504,
+      "scs_b": 0.7389,
+      "oos_sharpe": 0.4679,
+      "oos_return": 7.27,
+      "oos_max_dd": -19.66,
+      "n_trades": 395,
+      "verdict_a": "PHASE_B_APPROVED"
+    },
+    {
+      "group": "20d_multiclass_volatility",
+      "scs_a": 0.7318,
+      "scs_b": 0.715,
+      "oos_sharpe": 0.9176,
+      "oos_return": 16.72,
+      "oos_max_dd": -19.65,
+      "n_trades": 241,
+      "verdict_a": "PHASE_B_APPROVED"
+    },
+    {
+      "group": "7d_directional_binary",
+      "scs_a": 0.7292,
+      "scs_b": 0.685,
+      "oos_sharpe": 0.6366,
+      "oos_return": 10.85,
+      "oos_max_dd": -17.64,
+      "n_trades": 536,
+      "verdict_a": "PHASE_B_APPROVED"
+    },
+    {
+      "group": "5d_multiclass_volatility",
+      "scs_a": 0.7037,
+      "scs_b": 0.6349,
+      "oos_sharpe": 0.1092,
+      "oos_return": 0.52,
+      "oos_max_dd": -7.24,
+      "n_trades": 202,
+      "verdict_a": "PHASE_B_APPROVED"
+    },
+    {
+      "group": "20d_directional_binary",
+      "scs_a": 0.6842,
+      "scs_b": 0.7101,
+      "oos_sharpe": 1.1946,
+      "oos_return": 23.82,
+      "oos_max_dd": -18.31,
+      "n_trades": 246,
+      "verdict_a": "BORDERLINE"
+    },
+    {
+      "group": "15d_multiclass_volatility",
+      "scs_a": 0.6532,
+      "scs_b": 0.6868,
+      "oos_sharpe": 0.8682,
+      "oos_return": 15.44,
+      "oos_max_dd": -18.0,
+      "n_trades": 286,
+      "verdict_a": "BORDERLINE"
+    },
+    {
+      "group": "10d_multiclass_volatility",
+      "scs_a": 0.6457,
+      "scs_b": 0.6871,
+      "oos_sharpe": 0.6381,
+      "oos_return": 9.37,
+      "oos_max_dd": -16.72,
+      "n_trades": 338,
+      "verdict_a": "BORDERLINE"
+    },
+    {
+      "group": "7d_multiclass_volatility",
+      "scs_a": 0.6264,
+      "scs_b": 0.6815,
+      "oos_sharpe": -0.0913,
+      "oos_return": -1.9,
+      "oos_max_dd": -11.65,
+      "n_trades": 313,
+      "verdict_a": "BORDERLINE"
+    },
+    {
+      "group": "15d_directional_binary",
+      "scs_a": 0.6239,
+      "scs_b": 0.6961,
+      "oos_sharpe": 0.8509,
+      "oos_return": 15.02,
+      "oos_max_dd": -16.58,
+      "n_trades": 287,
+      "verdict_a": "BORDERLINE"
+    },
+    {
+      "group": "3d_directional_binary",
+      "scs_a": 0.6185,
+      "scs_b": 0.5877,
+      "oos_sharpe": 0.2639,
+      "oos_return": 3.15,
+      "oos_max_dd": -19.07,
+      "n_trades": 1078,
+      "verdict_a": "BORDERLINE"
+    },
+    {
+      "group": "3d_multiclass_volatility",
+      "scs_a": 0.5726,
+      "scs_b": 0.3431,
+      "oos_sharpe": 0.1639,
+      "oos_return": 0.33,
+      "oos_max_dd": -1.5,
+      "n_trades": 24,
+      "verdict_a": "BORDERLINE"
+    }
+  ]
+}

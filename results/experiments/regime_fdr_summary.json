@@ -1,0 +1,102 @@
+{
+  "tau_0.50": {
+    "tau": 0.5,
+    "mean_n_pass": 2.47,
+    "ci_95_lo": 2.0,
+    "ci_95_hi": 4.0,
+    "mean_fpr_binary": 0.3333,
+    "mean_fpr_ternary": 0.0783,
+    "mean_fpr_all": 0.2058,
+    "n_valid_seeds": 200
+  },
+  "tau_0.55": {
+    "tau": 0.55,
+    "mean_n_pass": 1.2,
+    "ci_95_lo": 1.0,
+    "ci_95_hi": 2.0,
+    "mean_fpr_binary": 0.1667,
+    "mean_fpr_ternary": 0.0333,
+    "mean_fpr_all": 0.1,
+    "n_valid_seeds": 200
+  },
+  "tau_0.60": {
+    "tau": 0.6,
+    "mean_n_pass": 0.0,
+    "ci_95_lo": 0.0,
+    "ci_95_hi": 0.0,
+    "mean_fpr_binary": 0.0,
+    "mean_fpr_ternary": 0.0,
+    "mean_fpr_all": 0.0,
+    "n_valid_seeds": 200
+  },
+  "tau_0.65": {
+    "tau": 0.65,
+    "mean_n_pass": 0.0,
+    "ci_95_lo": 0.0,
+    "ci_95_hi": 0.0,
+    "mean_fpr_binary": 0.0,
+    "mean_fpr_ternary": 0.0,
+    "mean_fpr_all": 0.0,
+    "n_valid_seeds": 200
+  },
+  "tau_0.70": {
+    "tau": 0.7,
+    "mean_n_pass": 0.0,
+    "ci_95_lo": 0.0,
+    "ci_95_hi": 0.0,
+    "mean_fpr_binary": 0.0,
+    "mean_fpr_ternary": 0.0,
+    "mean_fpr_all": 0.0,
+    "n_valid_seeds": 200
+  },
+  "tau_0.75": {
+    "tau": 0.75,
+    "mean_n_pass": 0.0,
+    "ci_95_lo": 0.0,
+    "ci_95_hi": 0.0,
+    "mean_fpr_binary": 0.0,
+    "mean_fpr_ternary": 0.0,
+    "mean_fpr_all": 0.0,
+    "n_valid_seeds": 200
+  },
+  "tau_0.80": {
+    "tau": 0.8,
+    "mean_n_pass": 0.0,
+    "ci_95_lo": 0.0,
+    "ci_95_hi": 0.0,
+    "mean_fpr_binary": 0.0,
+    "mean_fpr_ternary": 0.0,
+    "mean_fpr_all": 0.0,
+    "n_valid_seeds": 200
+  },
+  "tau_0.85": {
+    "tau": 0.85,
+    "mean_n_pass": 0.0,
+    "ci_95_lo": 0.0,
+    "ci_95_hi": 0.0,
+    "mean_fpr_binary": 0.0,
+    "mean_fpr_ternary": 0.0,
+    "mean_fpr_all": 0.0,
+    "n_valid_seeds": 200
+  },
+  "tau_0.90": {
+    "tau": 0.9,
+    "mean_n_pass": 0.0,
+    "ci_95_lo": 0.0,
+    "ci_95_hi": 0.0,
+    "mean_fpr_binary": 0.0,
+    "mean_fpr_ternary": 0.0,
+    "mean_fpr_all": 0.0,
+    "n_valid_seeds": 200
+  },
+  "tau_0.95": {
+    "tau": 0.95,
+    "mean_n_pass": 0.0,
+    "ci_95_lo": 0.0,
+    "ci_95_hi": 0.0,
+    "mean_fpr_binary": 0.0,
+    "mean_fpr_ternary": 0.0,
+    "mean_fpr_all": 0.0,
+    "n_valid_seeds": 200
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "n_tickers": 159,
+  "phase_a": {
+    "3d_directional_binary": {
+      "SCS_A": 0.601,
+      "S_time": 0.7065,
+      "S_asset": 0.4,
+      "S_model": 0.3422,
+      "S_seed": 0.9257,
+      "S_dist": 1.0,
+      "verdict": "BORDERLINE",
+      "mean_sharpe": 0.5544,
+      "n_runs": 7110
+    },
+    "3d_multiclass_volatility": {
+      "SCS_A": 0.486,
+      "S_time": 0.5716,
+      "S_asset": 0.4,
+      "S_model": 0.0188,
+      "S_seed": 0.9225,
+      "S_dist": 1.0,
+      "verdict": "REJECTED",
+      "mean_sharpe": 0.4229,
+      "n_runs": 7110
+    },
+    "5d_directional_binary": {
+      "SCS_A": 0.5631,
+      "S_time": 0.5104,
+      "S_asset": 0.4,
+      "S_model": 0.3827,
+      "S_seed": 0.9319,
+      "S_dist": 1.0,
+      "verdict": "BORDERLINE",
+      "mean_sharpe": 0.5695,
+      "n_runs": 7110
+    },
+    "5d_multiclass_volatility": {
+      "SCS_A": 0.4938,
+      "S_time": 0.5255,
+      "S_asset": 0.4,
+      "S_model": 0.1179,
+      "S_seed": 0.8861,
+      "S_dist": 1.0,
+      "verdict": "REJECTED",
+      "mean_sharpe": 0.7123,
+      "n_runs": 7110
+    },
+    "7d_directional_binary": {
+      "SCS_A": 0.569,
+      "S_time": 0.5854,
+      "S_asset": 0.4,
+      "S_model": 0.3227,
+      "S_seed": 0.9464,
+      "S_dist": 1.0,
+      "verdict": "BORDERLINE",
+      "mean_sharpe": 1.0122,
+      "n_runs": 7110
+    },
+    "7d_multiclass_volatility": {
+      "SCS_A": 0.5142,
+      "S_time": 0.5367,
+      "S_asset": 0.4,
+      "S_model": 0.1602,
+      "S_seed": 0.9334,
+      "S_dist": 1.0,
+      "verdict": "BORDERLINE",
+      "mean_sharpe": 0.8351,
+      "n_runs": 7110
+    },
+    "10d_directional_binary": {
+      "SCS_A": 0.4437,
+      "S_time": 0.4,
+      "S_asset": 0.4,
+      "S_model": 0.0,
+      "S_seed": 0.9581,
+      "S_dist": 1.0,
+      "verdict": "REJECTED",
+      "mean_sharpe": 4.8912,
+      "n_runs": 7110
+    },
+    "10d_multiclass_volatility": {
+      "SCS_A": 0.4437,
+      "S_time": 0.4,
+      "S_asset": 0.4,
+      "S_model": 0.0,
+      "S_seed": 0.9577,
+      "S_dist": 1.0,
+      "verdict": "REJECTED",
+      "mean_sharpe": 4.8893,
+      "n_runs": 7110
+    },
+    "15d_directional_binary": {
+      "SCS_A": 0.5642,
+      "S_time": 0.4,
+      "S_asset": 0.4,
+      "S_model": 0.4757,
+      "S_seed": 0.9685,
+      "S_dist": 1.0,
+      "verdict": "BORDERLINE",
+      "mean_sharpe": 0.8111,
+      "n_runs": 7110
+    },
+    "15d_multiclass_volatility": {
+      "SCS_A": 0.4841,
+      "S_time": 0.4,
+      "S_asset": 0.4,
+      "S_model": 0.1673,
+      "S_seed": 0.9484,
+      "S_dist": 1.0,
+      "verdict": "REJECTED",
+      "mean_sharpe": 1.0364,
+      "n_runs": 7110
+    },
+    "20d_directional_binary": {
+      "SCS_A": 0.5097,
+      "S_time": 0.4,
+      "S_asset": 0.4,
+      "S_model": 0.2594,
+      "S_seed": 0.9658,
+      "S_dist": 1.0,
+      "verdict": "BORDERLINE",
+      "mean_sharpe": 2.147,
+      "n_runs": 7110
+    },
+    "20d_multiclass_volatility": {
+      "SCS_A": 0.477,
+      "S_time": 0.4,
+      "S_asset": 0.4,
+      "S_model": 0.1271,
+      "S_seed": 0.9679,
+      "S_dist": 1.0,
+      "verdict": "REJECTED",
+      "mean_sharpe": 2.1423,
+      "n_runs": 7110
+    }
+  },
+  "summary_phase_a": {
+    "n_pass_070": 0,
+    "mean_scs_a": 0.5125,
+    "min_scs_a": 0.4437
+  },
+  "elapsed_seconds": 2318.0
+}
