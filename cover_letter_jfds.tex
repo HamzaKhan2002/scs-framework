@@ -15,16 +15,18 @@ We are writing to submit the manuscript entitled \textbf{``Signal Credibility Sc
 
 \textbf{Summary.} This paper introduces the Signal Credibility Score (SCS), a three-phase validation framework that screens machine learning trading signals across five robustness dimensions---temporal consistency, cross-asset generalization, inter-model consensus, seed stability, and trade distribution quality---before permitting out-of-sample evaluation. The framework features three methodological contributions: (i)~a performance-weighted inter-model consensus measure ($S_{\mathrm{model}}$) that conditions agreement on profitability, guarded by a Kish effective-$N$ threshold; (ii)~multi-window out-of-sample testing across three non-overlapping evaluation years (2023, 2024, 2025); and (iii)~Monte Carlo false discovery rate calibration (12{,}000 null trials) with oracle-based power analysis (50 seeds, 10 noise levels). A head-to-head comparison with the Benjamini--Hochberg FDR correction shows that BH approves 9/12 groups based solely on statistical significance, while SCS approves 5/12 by additionally requiring cross-model and cross-asset robustness.
 
-Applied to 12 signal groups across 27 US equities, with discovery on 2010--2013 data, a primary walk-forward stage over 2014--2022, and complementary non-overlapping OOS evaluations over 2023--2025, the framework approves 5 of 12 groups at $\tau=0.70$. At this threshold, zero false positives are observed in 12{,}000 null trials while oracle power ranges from 96\% to 100\% across the tested noise levels. Under the strict pipeline, 4 of 5 approved groups pass Phase~B in all three OOS evaluations with positive Sharpe in every window. The paper honestly reports that no approved signal statistically outperforms buy-and-hold---consistent with the framework's role as a conservative robustness filter rather than a performance predictor.
+Applied to 12 signal groups across 27 US equities, with discovery on 2010--2013 data, a primary walk-forward stage over 2014--2022, and complementary non-overlapping OOS evaluations over 2023--2025, the framework approves 5 of 12 groups at $\tau=0.70$. At this threshold, zero false positives are observed in 12{,}000 null trials while oracle power ranges from 96\% to 100\% across the tested noise levels. Under the strict pipeline, 4 of 5 approved groups pass Phase~B in all three OOS evaluations with positive Sharpe in every window. The paper shows that a stringent validation pipeline screens out signals that appear promising in discovery but do not demonstrate statistically reliable out-of-sample superiority to buy-and-hold, underscoring the value of conservative signal selection.
+
+For practitioners, the SCS framework provides an auditable pre-deployment go/no-go filter for ML trading signals.
 
 \textbf{Why JFDS.} This manuscript aligns with JFDS's mission in three ways:
 
 \begin{enumerate}
     \item \textbf{Methodological depth.} The paper contributes formal FDR calibration, power analysis, and a head-to-head comparison with Benjamini--Hochberg for a composite validation metric---addressing the kind of multiple-testing and false discovery concerns that JFDS has highlighted since its founding.
 
-    \item \textbf{Reproducibility.} The complete implementation (approximately 1{,}900 lines of Python, 42 automated tests, 14{,}580 model runs) is open-source at \url{https://github.com/HamzaKhan2002/scs-framework}. Every number in the paper is traceable to a canonical JSON result file included in the repository.
+    \item \textbf{Reproducibility.} The complete implementation (approximately 5{,}800 lines of Python across 37 modules, 42 automated tests, 14{,}580 model runs) is open-source at \url{https://github.com/HamzaKhan2002/scs-framework}. Every number in the paper is traceable to a canonical JSON result file included in the repository.
 
-    \item \textbf{Honest reporting.} The paper documents that approved ML signals offer no statistically significant advantage over buy-and-hold, and that inter-model consensus ($S_{\mathrm{model}}$, scores 0.00--0.48) is the binding constraint---findings that underscore the importance of rigorous, multi-dimensional validation over return-maximizing selection.
+    \item \textbf{Honest reporting.} The paper shows that inter-model consensus ($S_{\mathrm{model}}$, scores 0.00--0.48) is the main bottleneck and that benchmark-beating performance does not survive formal testing, underscoring the importance of rigorous, multi-dimensional validation over return-maximizing selection.
 \end{enumerate}
 
 \textbf{Declarations.} This manuscript has not been published elsewhere and is not under consideration at another journal. The authors have no conflicts of interest to declare. Author contributions are detailed in a CRediT statement within the manuscript.
@@ -32,7 +34,7 @@ Applied to 12 signal groups across 27 US equities, with discovery on 2010--2013 
 \textbf{Suggested reviewers.} The following researchers work on ML signal validation and backtesting methodology:
 \begin{itemize}
     \item David H.~Bailey --- co-author of the probability of backtest overfitting framework
-    \item Campbell R.~Harvey --- co-author of foundational work on backtesting, multiple testing, and false discoveries in finance
+    \item Ali N.~Hirsa --- researcher in financial machine learning and quantitative investing
     \item Petter N.~Kolm --- researcher in financial machine learning and quantitative trading
 \end{itemize}
 

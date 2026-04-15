@@ -27,9 +27,9 @@
   for Machine Learning Trading Signals%
 }
 \author{%
-  Hamza Khan\textsuperscript{1} \and Alexandre Danoffre\textsuperscript{1}\\[4pt]
-  \textsuperscript{1}\textit{ECE Paris, School of Engineering}\\
-  \texttt{\{hamza.khan, alexandre.danoffre\}@edu.ece.fr}%
+  Hamza Khan\textsuperscript{1,*} \and Alexandre Danoffre\textsuperscript{1}\\[4pt]
+  \textsuperscript{1}\textit{ECE Paris, School of Engineering}\\[2pt]
+  \textsuperscript{*}Corresponding author: \texttt{hamza.khan@edu.ece.fr}%
 }
 \date{April 2026}
 
@@ -38,7 +38,7 @@
 
 % ============================================================
 \begin{abstract}
-Validation protocols for machine learning trading signals remain underdeveloped, with most studies reporting in-sample metrics without rigorous out-of-sample testing across market regimes. We introduce the Signal Credibility Score (SCS), a three-phase validation framework that evaluates ML trading signals across five dimensions: temporal robustness, cross-asset generalization, inter-model consensus, stochastic stability, and distributional quality. The framework proceeds through signal discovery (Phase~A), expanding walk-forward validation (Phase~B), and frozen-model out-of-sample testing (Phase~C) with four complementary statistical tests. A performance-weighted inter-model consensus measure ($S_{\text{model}}$) conditions agreement on profitability rather than mere rank correlation, guarded by a Kish effective-$N$ threshold. Monte Carlo false discovery rate calibration (12{,}000 null trials) and oracle-based power analysis characterize the framework's operating characteristics. Applied to 12~signal groups over 27~US equities, with discovery on 2010--2013 data, a primary walk-forward stage over 2014--2022, and complementary non-overlapping OOS evaluations over 2023--2025, the framework approves 5 of 12 groups. At $\tau\geq0.70$, zero false positives are observed in 12{,}000 null trials (Clopper--Pearson 95\% CI: $[0, 0.03\%]$) while oracle injection yields 96--100\% observed detection power across the tested noise levels. Under the strict pipeline, 4 of the 5 approved groups pass Phase~B in all three OOS evaluations (2023, 2024, 2025), averaging Sharpe ratios of +0.76, +1.32, and +0.68 respectively. In a separate forced-through diagnostic (all 12 groups evaluated regardless of Phase-A status), 8 groups pass Phase~B in every window with average Sharpe of +1.07, +1.39, and +0.60, though with declining magnitude that may reflect signal decay or regime variation.
+Validation protocols for machine learning trading signals remain underdeveloped, with most studies reporting in-sample metrics without rigorous out-of-sample testing across market regimes. We introduce the Signal Credibility Score (SCS), a three-phase validation framework that evaluates ML trading signals across five dimensions: temporal robustness, cross-asset generalization, inter-model consensus, stochastic stability, and distributional quality. The framework proceeds through signal discovery (Phase~A), expanding walk-forward validation (Phase~B), and frozen-model out-of-sample testing (Phase~C) with four complementary statistical tests. A performance-weighted inter-model consensus measure ($S_{\text{model}}$) conditions agreement on profitability rather than mere rank correlation, guarded by a Kish effective-$N$ threshold. Monte Carlo false discovery rate calibration (12{,}000 null trials) and oracle-based power analysis characterize the framework's operating characteristics. Applied to 12~signal groups over 27~US equities, with discovery on 2010--2013 data, a primary walk-forward stage over 2014--2022, and complementary non-overlapping OOS evaluations over 2023--2025, the framework approves 5 of 12 groups. At $\tau\geq0.70$, zero false positives are observed in 12{,}000 null trials (Clopper--Pearson 95\% CI: $[0, 0.03\%]$) while oracle injection yields 96--100\% observed detection power across the tested noise levels. Under the strict pipeline, 4 of the 5 approved groups pass Phase~B in all three OOS evaluations (2023, 2024, 2025), averaging Sharpe ratios of +0.76, +1.32, and +0.68 respectively. These results position SCS as a conservative pre-deployment validation filter rather than a performance-maximizing selector.
 \end{abstract}
 
 \medskip\noindent
@@ -150,6 +150,19 @@ Phase~B scores each approved signal under expanding walk-forward conditions:
 The five components measure walk-forward temporal robustness ($S_{\text{time}}^{(B)}$, 25\%), cross-asset persistence ($S_{\text{asset}}^{(B)}$, 25\%), cost tolerance ($S_{\text{cost}}$, 20\%---the ratio of stress-cost Sharpe to baseline-cost Sharpe), structural stability ($S_{\text{struct}}$, 15\%---mean pairwise correlation of per-asset Sharpe vectors across windows), and economic coherence ($S_{\text{eco}}$, 15\%---plausibility of trade frequency for the given horizon).
 
 \textbf{Approval:} SCS-B $\geq 0.60 \Rightarrow$ VALID\_FOR\_PHASE\_C.
+
+\subsection{Portfolio Execution Parameters}
+\label{sec:execution}
+
+The Phase~C backtest translates model predictions into portfolio positions using three execution parameters that are fixed before observing OOS data:
+
+\begin{itemize}
+  \item \textbf{Probability threshold.} A position is opened only when the predicted probability exceeds $P \geq 0.55$ (long or short), filtering out low-conviction signals.
+  \item \textbf{Stop-loss / take-profit.} Open positions are monitored daily; a stop-loss at $-5\%$ and take-profit at $+8\%$ (directional return) cap tail risk and lock in large gains before the holding horizon expires.
+  \item \textbf{Entry price.} Positions are entered at the closing price of the signal date. Because labels are defined with respect to $\text{Open}(t{+}1)$ (Section~\ref{sec:methodology}), a systematic gap between label returns and backtest returns exists; the appendix (Appendix~\ref{app:backtest}) discusses this implementation shortfall.
+\end{itemize}
+
+All three parameters are identical across signal groups; no group-specific optimization is performed.
 
 \subsection{Phase C: Statistical Testing Protocol}
 
@@ -517,7 +530,7 @@ Threshold & $N_{\text{pass}}$ & Avg Sharpe & Avg Return & Notable observation \\
 \end{tabular}
 \end{table}
 
-\footnotetext{OOS Sharpe and Return columns report W3 (2025) performance only. Multi-window averages (Table~\ref{tab:multiwindow_results}) span three regimes and would yield different rankings; the single-year values are shown here because the threshold sensitivity analysis applies the same Phase~A gate uniformly and the W3 OOS year is the primary test period.}
+\footnotetext{OOS Sharpe and Return columns report W3 (2025) performance---the most recent and therefore most conservative evaluation window---rather than multi-window averages (Table~\ref{tab:multiwindow_results}), because the threshold sensitivity analysis applies the same Phase~A gate uniformly and a single-year slice avoids confounding with regime averaging. The primary OOS evaluation remains 2023 (Phase~C, Section~\ref{sec:methodology}); 2024 and 2025 are complementary regime tests (Section~\ref{sec:multiwindow}).}
 
 \textbf{Interpretation:}
 
@@ -794,7 +807,7 @@ $\tau$ & Mean $N_{\text{pass}}$ & 95\% CI & FPR (binary) & FPR (ternary) \\
 \textbf{Interpretation:}
 
 \begin{itemize}
-  \item At $\tau=0.65$, binary FPR drops to 0\% ($0/6{,}000$ trials) while ternary FPR is 0.12\% ($7/6{,}000$). The residual ternary false positives come from 10d ternary (5 seeds) and 7d ternary (1 seed), reflecting occasional alignment of noise-corrupted features with the SCS sub-score thresholds.
+  \item At $\tau=0.65$, binary FPR drops to 0\% ($0/6{,}000$ trials) while ternary FPR is 0.12\% ($7/6{,}000$). The residual ternary false positives come from 10d ternary (5 seeds), 15d ternary (1 seed), and 7d ternary (1 seed), reflecting occasional alignment of noise-corrupted features with the SCS sub-score thresholds.
 
   \item At $\tau \geq 0.70$, the observed FPR is 0\% for both schemes ($0/12{,}000$). The corresponding 95\% CI is $[0, 0.03\%]$. In the noisier 2015--2018 window ($N=200$ seeds), we also observe zero false positives at $\tau \geq 0.60$.
 \end{itemize}
@@ -846,7 +859,7 @@ The same framework with identical hyperparameters ($\tau=0.70$, 12 signal groups
   \item \textbf{Discovery window sensitivity}: SCS-A is sensitive to the discovery window. The same framework with $\tau=0.70$ approves 5/12 groups in the 2010--2013 window but only 3/12 in a 2015--2018 window (Table~\ref{tab:window_contrast}). Practitioners must carefully select the discovery period and consider running the framework across multiple windows to assess stability.
   \item \textbf{Weak Spearman correlation}: Using one observation per signal group (mean OOS Sharpe across three windows, $N=8$ pass-all groups), the Spearman correlation with SCS-A is $\rho=-0.405$ ($p=0.32$); using W3 alone, $\rho=0.119$ ($p=0.78$). SCS-A is a robustness filter, not a performance predictor---higher SCS-A does not imply higher OOS returns.
   \item \textbf{Feature set}: The 11 technical indicators are deliberately parsimonious. Incorporating fundamental, sentiment, or alternative data sources could strengthen the signals while the same validation infrastructure applies unchanged.
-  \item \textbf{Universe}: 27 US large-cap securities represents a limited, survivorship-biased universe (selected from current S\&P~500 membership and filtered for data availability back to 2010). When we extend the pipeline to a broader 50-ticker universe that includes additional mid-caps and recently added stocks, the SCS framework rejects all 12 signal groups (0/12 approved), confirming that survivorship-biased stock selection inflates in-sample robustness scores \citep{elton1996survivorship}. Extension to international markets, small caps, or other asset classes would test generalizability. The survivorship bias likely inflates OOS returns relative to a universe defined ex ante; the expanded-universe experiment quantifies this effect.
+  \item \textbf{Universe}: 27 US large-cap securities represents a limited, survivorship-biased universe (selected from current S\&P~500 membership and filtered for data availability back to 2010). When we extend the pipeline to a broader 159-ticker universe covering current S\&P\,500 members with sufficient data history, the SCS framework rejects all 12 signal groups (0/12 approved), confirming that survivorship-biased stock selection inflates in-sample robustness scores \citep{elton1996survivorship}. Extension to international markets, small caps, or other asset classes would test generalizability. The survivorship bias likely inflates OOS returns relative to a universe defined ex ante; the expanded-universe experiment quantifies this effect.
   \item \textbf{Threshold calibration}: With the 2010--2013 window, $\tau=0.70$ is the binding constraint (5/12 pass). However, the threshold's discriminating power depends on the signal environment: in future applications with different feature sets or universes, the cliff may shift. Practitioners should assess the threshold's position relative to the SCS-A distribution before deploying, and consider using the more conservative FDR-calibrated threshold ($\tau=0.75$, which also yields zero observed false positives in our calibration sample) as an alternative.
   \item \textbf{Computational cost}: The Phase~A grid requires $>$14,000 model fits. Although parallelizable, this scales poorly to higher-dimensional feature or hyperparameter spaces. Bayesian optimization could reduce the search while preserving the multi-dimensional validation structure.
   \item \textbf{Theoretical foundation}: As noted in Section~\ref{sec:interpretation}, SCS is a practitioner-oriented composite score with a robustness interpretation, not a formal statistical test. The Monte Carlo FDR calibration (Section~\ref{sec:fdr}) provides empirical false positive rates under the null, but a fully rigorous characterization---converting each sub-score to a calibrated $p$-value and combining via Fisher's method---would place SCS on firmer theoretical ground and is the subject of planned follow-up work.
@@ -874,13 +887,13 @@ The performance-weighted consensus measure, multi-window OOS testing, and FDR ca
 
 The paper's central contribution is not the discovery of profitable signals---the approved strategies do not beat buy-and-hold---but rather a replicable validation protocol that \emph{honestly separates robust signals from noise} and reports transparent, falsifiable conclusions. In an era where most ML trading studies overstate their findings, a framework that rejects 58\% of candidates and openly quantifies what remains is, we argue, more valuable than one that maximizes reported returns.
 
-The complete pipeline (approximately 1,900 lines of Python, 42 automated tests, 14,580 model runs, 135,000+ trades) is open-source and fully reproducible.
+The complete pipeline (approximately 5{,}800 lines of Python across 37 modules, 42 automated tests, 14,580 model runs, 135,000+ trades) is open-source and fully reproducible.
 
 
 % ============================================================
 \section*{Code Availability}
 
-The complete implementation---including the performance-weighted $S_{\text{model}}$, multi-window OOS pipeline, FDR simulation, and power analysis---is available at \url{https://github.com/HamzaKhan2002/scs-framework}. The repository contains approximately 1{,}900 lines of Python across 22 modules, 42 automated tests, and all experiment result files needed to reproduce every number in this paper.
+The complete implementation---including the performance-weighted $S_{\text{model}}$, multi-window OOS pipeline, FDR simulation, and power analysis---is available at \url{https://github.com/HamzaKhan2002/scs-framework}. The repository contains approximately 5{,}800 lines of Python across 37 modules, 42 automated tests, and all experiment result files needed to reproduce every number in this paper.
 
 
 % ============================================================
@@ -1111,7 +1124,18 @@ If $N_{\text{eff}} < 5$, weight concentration is too high (a few conditions domi
 \section{Portfolio Backtest Mechanics}
 \label{app:backtest}
 
-The backtest engine proceeds as follows. Each trading day involves four steps: (1)~check stop-loss/take-profit on open positions using directional return; (2)~close positions that have reached their planned horizon; (3)~rank tickers by model confidence, apply probability thresholds ($P \geq 0.55$), and open new positions subject to position limits; (4)~mark-to-market including unrealized P\&L. Positions are entered at the closing price of the signal date; in practice, execution would occur at or near the subsequent open, introducing an implementation shortfall not modeled here. Transaction costs are fixed basis points on traded notional (5~bps baseline, 15~bps stress) with no market-impact or slippage model. The annualized Sharpe ratio is $\text{SR} = (\bar{r}_d / \sigma_d) \times \sqrt{252}$, computed from the daily equity curve.
+The execution parameters introduced in Section~\ref{sec:execution} are operationalized as follows. Each trading day involves four steps:
+
+\begin{enumerate}
+  \item \textbf{Stop-loss / take-profit check.} Open positions are evaluated using the directional return from the entry price. A stop-loss triggers at $-5\%$ and a take-profit at $+8\%$.
+  \item \textbf{Horizon exit.} Positions that have reached their planned holding period ($H$ trading days) are closed at the day's closing price.
+  \item \textbf{New entries.} Tickers are ranked by predicted probability; only signals with $P \geq 0.55$ are eligible. Positions are opened subject to a maximum of 15 simultaneous positions and a per-ticker exposure cap of 12\% of equity.
+  \item \textbf{Mark-to-market.} Equity is updated including unrealized P\&L on all open positions.
+\end{enumerate}
+
+\textbf{Entry-price convention and label mismatch.} Positions are entered at the \emph{closing price of the signal date} ($\text{Close}(t)$), whereas the labeling formula (Section~\ref{sec:methodology}) defines returns relative to $\text{Open}(t{+}1)$: $r_t(H) = \text{Close}(t{+}H) / \text{Open}(t{+}1) - 1$. This creates a systematic wedge---the overnight gap between $\text{Close}(t)$ and $\text{Open}(t{+}1)$---that slightly misaligns label returns and realized returns. The discrepancy is conservative on average (buying at the close when the label assumes the next open), but it constitutes an implementation shortfall that live execution would need to manage via limit orders near the close or at the open.
+
+Transaction costs are fixed basis points on traded notional (5~bps baseline, 15~bps stress) with no market-impact or slippage model. The annualized Sharpe ratio is $\text{SR} = (\bar{r}_d / \sigma_d) \times \sqrt{252}$, computed from the daily equity curve.
 
 
 \section{Complete SCS-A and SCS-B Results}
